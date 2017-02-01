@@ -35,35 +35,12 @@ function api(req, res) {
   });
 }
 
-// INSERT YOUR ROUTES HERE
-
-/**
-* route with documentation to build your project with prismic
-*/
-app.get('/', function(req, res) {
-  res.redirect('/help');
-});
-
-/**
-* Prismic documentation to build your project with prismic
-*/
-app.get('/help', function(req, res) {
-  const repoRegexp = new RegExp('^(https?:\/\/([\\-\\w]+)\\.[a-z]+\\.(io|dev))\/api$');
-  const match = PConfig.apiEndpoint.match(repoRegexp);
-  const repoURL = match[1];
-  const name = match[2];
-  const host = req.headers.host;
-  const isConfigured = name !== 'your-repo-name';
-  res.render('help', {isConfigured, repoURL, name, host});
-});
-
-/**
-* preconfigured prismic preview
-*/
-app.get('/preview', function(req, res) {
+app.get('/make/:uid', function(req, res) {
+  var uid = req.params.uid;
   api(req, res).then(function(api) {
-    return Prismic.preview(api, PConfig.linkResolver, req, res);
-  }).catch(function(err) {
-    handleError(err, req, res);
+    return api.getByUID('make', uid);
+  }).then(function(document) {
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify(document));
   });
 });

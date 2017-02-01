@@ -14,14 +14,10 @@ module.exports = function() {
   var app = express();
 
   // all environments
-  app.set('port', process.env.PORT || 3000);
-  app.set('views', path.join(__dirname, 'views'));
-  app.set('view engine', 'pug');
-  app.use(favicon('public/images/punch.png'));
+  app.set('port', process.env.PORT || 5000);
   app.use(logger('dev'));
   app.use(bodyParser());
   app.use(methodOverride());
-  app.use(express.static(path.join(__dirname, 'public')));
 
   app.use(errorHandler());
 
