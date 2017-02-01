@@ -35,12 +35,36 @@ function api(req, res) {
   });
 }
 
-app.get('/make/:uid', function(req, res) {
-  var uid = req.params.uid;
+app.get('/make/:make', function(req, res) {
   api(req, res).then(function(api) {
-    return api.getByUID('make', uid);
+    return api.getByUID('make', req.params.make);
+  }).then(function(document) {
+    res.setHeader('Content-Type', 'application/json');
+    res.send({
+      id: document.id,
+      uid: document.uid,
+      title: document.data['make.title'].value[0].text
+    });
+  });
+});
+
+app.get('/model/:model', function(req, res) {
+  api(req, res).then(function(api) {
+    return api.getByUID('model', req.params.model);
   }).then(function(document) {
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify(document));
+  });
+});
+
+app.get('/make/:make/models', function(req, res) {
+  api(req, res).then(function(api) {
+    return api.query([
+      Prismic.Predicates.at("document.type", "model"),
+      Prismic.Predicates.at("my.model.make", req.params.make)
+    ]);
+  }).then(function(document) {
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify(document.results));
   });
 });
