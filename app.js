@@ -9,6 +9,9 @@ var request = require('request');
 var express = require('express');
 var app = express();
 
+app.use(express.static('app/public'));
+
+
 function handleError(err, req, res) {
   if (err.status == 404) {
     res.status(404).send('404 not found');
@@ -69,6 +72,7 @@ app.get('/make/:make', function(req, res) {
     </ul>
     `;
     res.send(`
+      <link rel="stylesheet" type="text/css" href="/css/style.css">
       <h1>carzar</h1>
       ${info}
   `);
