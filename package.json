@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon -e css,ejs,js,json --watch app app.js",
     "lint": "eslint app.js config.js prismic-configuration.js",
     "test": "npm run lint"
   },
