@@ -15,34 +15,39 @@ app.use(express.static('app/public'));
 app.set('view engine', 'ejs');
 
 // DIRECTING WHERE IS MY VIEWS
-app.set('views','./app/views');
+app.set('views', './app/views');
 
 function handleError(err, req, res) {
-  if (err.status == 404) {
-    res.status(404).send('404 not found');
-  } else {
-    res.status(500).send('Error 500: ' + err.message);
-  }
+    if (err.status == 404) {
+        res.status(404).send('404 not found');
+    } else {
+        res.status(500).send('Error 500: ' + err.message);
+    }
 }
 
 app.listen(PORT, function() {
-  const repoEndpoint = PConfig.apiEndpoint.replace('/api', '');
-  request.post(repoEndpoint + '/app/settings/onboarding/run', {form: {language: 'node', framework: 'express'}});
-  console.log('Point your browser to: http://localhost:' + PORT);
+    const repoEndpoint = PConfig.apiEndpoint.replace('/api', '');
+    request.post(repoEndpoint + '/app/settings/onboarding/run', {
+        form: {
+            language: 'node',
+            framework: 'express'
+        }
+    });
+    console.log('Point your browser to: http://localhost:' + PORT);
 });
 
 /**
-* initialize prismic context and api
-*/
+ * initialize prismic context and api
+ */
 function api(req, res) {
-  res.locals.ctx = { // So we can use this information in the views
-    endpoint: PConfig.apiEndpoint,
-    linkResolver: PConfig.linkResolver
-  };
-  return Prismic.api(PConfig.apiEndpoint, {
-    accessToken: PConfig.accessToken,
-    req: req
-  });
+    res.locals.ctx = { // So we can use this information in the views
+        endpoint: PConfig.apiEndpoint,
+        linkResolver: PConfig.linkResolver
+    };
+    return Prismic.api(PConfig.apiEndpoint, {
+        accessToken: PConfig.accessToken,
+        req: req
+    });
 }
 // GETTING MODEL STEVEN VERSION
 
@@ -61,45 +66,45 @@ function api(req, res) {
 
 app.get('/', function(req, res) {
 
-// pass along the location of my index file
-  res.render('index')
+    // pass along the location of my index file
+    res.render('index')
 
 });
 
 
 // GETTING MAKE HESHAM VERSION
 
-app.get('/make/:make', function(req, res) {
-  api(req, res).then(function(api) {
-    return api.getByUID('make', req.params.make);
-  }).then(function(document) {
-    // console.log(document);
-    // var info = '';
-    // res.setHeader('Content-Type', 'application/json');
-    // info += `
-    // <ul>
-    // <li>
-    //   <h2>${document.id}</h2>
-    //   <p>${document.data['make.title'].value[0].text}</p>
-    // </li>
-    // </ul>
-    // `;
+app.get('sell/brand/:make', function(req, res) {
+    api(req, res).then(function(api) {
+        return api.getByUID('make', req.params.make);
+    }).then(function(document) {
+        // console.log(document);
+        // var info = '';
+        // res.setHeader('Content-Type', 'application/json');
+        // info += `
+        // <ul>
+        // <li>
+        //   <h2>${document.id}</h2>
+        //   <p>${document.data['make.title'].value[0].text}</p>
+        // </li>
+        // </ul>
+        // `;
 
-    var makeID = document.id;
-    var makeTitle = document.data['make.title'].value[0].text;
-    // pass along the location of my index file
-      res.render('makes',{
+        var makeID = document.id;
+        var makeTitle = document.data['make.title'].value[0].text;
+        // pass along the location of my index file
+        res.render('makes', {
 
-        mNumber:makeID,
-        mTitle:makeTitle
-      })
+            mID: makeID,
+            mTitle: makeTitle
+        })
 
-  //   res.send(`
-  //     <link rel="stylesheet" type="text/css" href="/css/style.css">
-  //     <h1>carzar</h1>
-  //     ${info}
-  // `);
-  });
+        //   res.send(`
+        //     <link rel="stylesheet" type="text/css" href="/css/style.css">
+        //     <h1>carzar</h1>
+        //     ${info}
+        // `);
+    });
 
 });
 
@@ -116,54 +121,84 @@ app.get('/make/:make', function(req, res) {
 
 // GETTING MODEL HESHAM VERSION
 app.get('/model/:model', function(req, res) {
-  api(req, res).then(function(api) {
-    return api.getByUID('model', req.params.model);
-  }).then(function(document) {
-    // res.setHeader('Content-Type', 'application/json');
-    // console.log(document);
-      var info = '';
+    api(req, res).then(function(api) {
+        return api.getByUID('model', req.params.model);
+    }).then(function(document) {
+        // res.setHeader('Content-Type', 'application/json');
+        // console.log(document);
+        //   var info = '';
+        //
+        //   info += `
+        //   <ul>
+        //   <li>
+        //     <h2>${document.id}</h2>
+        //     <p>${document.fragments['model.description'].blocks[0].text}</p>
+        //     <img src="${document.fragments['model.banner-image'].url}">
+        //   </li>
+        //   </ul>
+        //   `;
+        // res.send(
+        //   `
+        //     <h1>carzar</h1>
+        //     ${info}
+        //   `
 
-      info += `
-      <ul>
-      <li>
-        <h2>${document.id}</h2>
-        <p>${document.fragments['model.description'].blocks[0].text}</p>
-        <img src="${document.fragments['model.banner-image'].url}">
-      </li>
-      </ul>
-      `;
-    res.send(
-      `
-        <h1>carzar</h1>
-        ${info}
-      `
-      // JSON.stringify(document)
-  );
-  });
+
+        var modelID = document.id;
+        var modelDesc = document.fragments['model.description'].blocks[0].text;
+        var modelImg = document.fragments['model.banner-image'].url;
+        // JSON.stringify(document)
+
+        res.render('models', {
+
+            mdID: modelID,
+            mdDesc: modelDesc,
+            mdImg: modelImg
+        });
+
+    });
 });
 
 // GETTING ALL THE MAKE MODELS eg: make/volkswagen/models
 app.get('/make/:make/models', function(req, res) {
-  api(req, res).then(function(api) {
-    return api.query([
-      Prismic.Predicates.at("document.type", "model"),
-      Prismic.Predicates.at("my.model.make", req.params.make)
-    ]);
-  }).then(function(document) {
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(document.results));
-  });
+    api(req, res).then(function(api) {
+        return api.query([
+            Prismic.Predicates.at("document.type", "model"),
+            Prismic.Predicates.at("my.model.make", req.params.make)
+        ]);
+    }).then(function(document) {
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify(document.results));
+    });
 });
 
 // GETTING MAKE/MODEL  eg:  volkswagen/volkswagen-polo-classic
-app.get('/make/:make/:model', function(req, res) {
-  api(req, res).then(function(api) {
-    return api.query([
-      Prismic.Predicates.at("document.type", "model"),
-      Prismic.Predicates.at("my.model.make", req.params.make)
-    ]);
-  }).then(function(document) {
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(document.results));
-  });
+app.get('/sell/brand/:make/:model', function(req, res) {
+    api(req, res).then(function(api) {
+        return api.query([
+            Prismic.Predicates.at("document.type", "model"),
+            Prismic.Predicates.at("my.model.make", req.params.make)
+        ]);
+    }).then(function(document) {
+        console.log(document);
+        // res.setHeader('Content-Type', 'application/json');
+        // res.send(JSON.stringify(document.results));
+        var makemodelID = document.results[0].id;
+        var makemodelUID = document.results[0].uid;
+        var makemodelDesc = document.results[0].fragments['model.description'].blocks[0].text;
+
+
+        res.render('makemodel', {
+
+            mkmdID: makemodelID,
+            mkmdUID: makemodelUID,
+            mkmdDesc: makemodelDesc
+
+
+        });
+
+
+
+
+    });
 });

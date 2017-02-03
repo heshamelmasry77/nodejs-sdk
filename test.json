@@ -1,0 +1,77 @@
+[{
+    "id": "WG46nSkAAOkGHryl",
+    "uid": "volkswagen-polo-classic",
+    "type": "model",
+    "href": "https://carzar.prismic.io/api/documents/search?ref=WIhyqicAAKkOHHny&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22WG46nSkAAOkGHryl%22%29+%5D%5D",
+    "tags": [],
+    "slug": "volkswagen-polo-classic",
+    "slugs": ["volkswagen-polo-classic"],
+    "data": {
+        "model.make": {
+            "type": "Text",
+            "value": "volkswagen"
+        },
+        "model.title": {
+            "type": "StructuredText",
+            "value": [{
+                "type": "heading1",
+                "text": "Volkswagen Polo Classic",
+                "spans": []
+            }]
+        },
+        "model.description": {
+            "type": "StructuredText",
+            "value": [{
+                "type": "paragraph",
+                "text": "The Polo Classic was extremely popular in South Africa and around the world during its production run. It was the car of choice for people seeking an affordable, relatively premium compact car but needed the practicality of a bigger boot. Small enough to be easy to manoeuvre in the city and big enough to fit the luggage for the school run or a weekend away, the Polo Classic ticked plenty boxes. The fact that there are still so many on our roads despite being discontinued in 2009 is testament to their quality and enduring popularity.",
+                "spans": []
+            }]
+        },
+        "model.banner-image": {
+            "type": "Image",
+            "value": {
+                "main": {
+                    "dimensions": {
+                        "width": 800,
+                        "height": 480
+                    },
+                    "alt": null,
+                    "copyright": null,
+                    "url": "https://prismic-io.s3.amazonaws.com/carzar/1ca0acfca70a04ffbf6b2a68816067a6b9cea551_volkswagen-playclassic.jpg"
+                },
+                "views": {}
+            }
+        }
+    },
+    "firstPublicationDate": "2017-01-23T12:38:31.000Z",
+    "lastPublicationDate": "2017-01-23T12:38:31.000Z",
+    "fragments": {
+        "model.make": {
+            "value": "volkswagen"
+        },
+        "model.title": {
+            "blocks": [{
+                "type": "heading1",
+                "text": "Volkswagen Polo Classic",
+                "spans": []
+            }]
+        },
+        "model.description": {
+            "blocks": [{
+                "type": "paragraph",
+                "text": "The Polo Classic was extremely popular in South Africa and around the world during its production run. It was the car of choice for people seeking an affordable, relatively premium compact car but needed the practicality of a bigger boot. Small enough to be easy to manoeuvre in the city and big enough to fit the luggage for the school run or a weekend away, the Polo Classic ticked plenty boxes. The fact that there are still so many on our roads despite being discontinued in 2009 is testament to their quality and enduring popularity.",
+                "spans": []
+            }]
+        },
+        "model.banner-image": {
+            "main": {
+                "url": "https://prismic-io.s3.amazonaws.com/carzar/1ca0acfca70a04ffbf6b2a68816067a6b9cea551_volkswagen-playclassic.jpg",
+                "width": 800,
+                "height": 480,
+                "alt": null
+            },
+            "url": "https://prismic-io.s3.amazonaws.com/carzar/1ca0acfca70a04ffbf6b2a68816067a6b9cea551_volkswagen-playclassic.jpg",
+            "views": {}
+        }
+    }
+}]
