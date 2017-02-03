@@ -11,6 +11,11 @@ var app = express();
 
 app.use(express.static('app/public'));
 
+// SETTING MY VIEW ENGINE
+app.set('view engine', 'ejs');
+
+// DIRECTING WHERE IS MY VIEWS
+app.set('views','./app/views');
 
 function handleError(err, req, res) {
   if (err.status == 404) {
@@ -53,6 +58,14 @@ function api(req, res) {
 //     });
 //   });
 // });
+
+app.get('/', function(req, res) {
+
+// pass along the location of my index file
+  res.render('index')
+
+});
+
 
 // GETTING MAKE HESHAM VERSION
 
