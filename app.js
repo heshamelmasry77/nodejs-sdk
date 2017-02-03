@@ -74,21 +74,31 @@ app.get('/make/:make', function(req, res) {
     return api.getByUID('make', req.params.make);
   }).then(function(document) {
     // console.log(document);
-    var info = '';
+    // var info = '';
     // res.setHeader('Content-Type', 'application/json');
-    info += `
-    <ul>
-    <li>
-      <h2>${document.id}</h2>
-      <p>${document.data['make.title'].value[0].text}</p>
-    </li>
-    </ul>
-    `;
-    res.send(`
-      <link rel="stylesheet" type="text/css" href="/css/style.css">
-      <h1>carzar</h1>
-      ${info}
-  `);
+    // info += `
+    // <ul>
+    // <li>
+    //   <h2>${document.id}</h2>
+    //   <p>${document.data['make.title'].value[0].text}</p>
+    // </li>
+    // </ul>
+    // `;
+
+    var makeID = document.id;
+    var makeTitle = document.data['make.title'].value[0].text;
+    // pass along the location of my index file
+      res.render('makes',{
+
+        mNumber:makeID,
+        mTitle:makeTitle
+      })
+
+  //   res.send(`
+  //     <link rel="stylesheet" type="text/css" href="/css/style.css">
+  //     <h1>carzar</h1>
+  //     ${info}
+  // `);
   });
 
 });
