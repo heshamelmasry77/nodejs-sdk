@@ -74,7 +74,7 @@ app.get('/', function(req, res) {
 
 // GETTING MAKE HESHAM VERSION
 
-app.get('sell/brand/:make', function(req, res) {
+app.get('/sell/brand/:make', function(req, res) {
     api(req, res).then(function(api) {
         return api.getByUID('make', req.params.make);
     }).then(function(document) {
