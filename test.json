@@ -1,77 +1,384 @@
-[{
-    "id": "WG46nSkAAOkGHryl",
-    "uid": "volkswagen-polo-classic",
-    "type": "model",
-    "href": "https://carzar.prismic.io/api/documents/search?ref=WIhyqicAAKkOHHny&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22WG46nSkAAOkGHryl%22%29+%5D%5D",
-    "tags": [],
-    "slug": "volkswagen-polo-classic",
-    "slugs": ["volkswagen-polo-classic"],
+{
+    "id": "WG90FCkAAMUrJCKv",
+    "uid": "tata",
+    "type": "make",
+    "href": "https://carzar.prismic.io/api/documents/search?ref=WJh11SkAAMK_R-dX&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22WG90FCkAAMUrJCKv%22%29+%5D%5D",
+    "tags": ["Makes"],
+    "slug": "tata",
+    "slugs": ["tata"],
     "data": {
-        "model.make": {
-            "type": "Text",
-            "value": "volkswagen"
-        },
-        "model.title": {
+        "make.title": {
             "type": "StructuredText",
             "value": [{
                 "type": "heading1",
-                "text": "Volkswagen Polo Classic",
+                "text": "Tata",
                 "spans": []
             }]
         },
-        "model.description": {
+        "make.description": {
+            "type": "Group",
+            "value": [{
+                "description": {
+                    "type": "StructuredText",
+                    "value": [{
+                        "type": "paragraph",
+                        "text": "CarZar provides you with a quick and easy way to sell your car. To get started, complete the short quote form and we’ll provide you with an estimate valuation in minutes. Our algorithm calculates how much your car is worth so that the valuation is objective and transparent.",
+                        "spans": []
+                    }]
+                }
+            }, {
+                "description": {
+                    "type": "StructuredText",
+                    "value": [{
+                        "type": "paragraph",
+                        "text": "Tata is an Indian car manufacturer that was founded in 1945. They are headquartered in Mumbai, India and bought Jaguar and Land Rover in 2008. The injection of funds caused a remarkable turn of fortune for both British brands and gave Tata access to a premium market that they could not previously reach.",
+                        "spans": []
+                    }]
+                }
+            }, {
+                "description": {
+                    "type": "StructuredText",
+                    "value": [{
+                        "type": "paragraph",
+                        "text": "The people’s car of India is the country’s largest car manufacturer and they cater to the needs of emerging markets. Their cars are affordable and efficient. Their reputation as a carmaker of the people is further enhanced by the fact that they were the first company in India to introduce an eight-hour working day and grant maternity leave.",
+                        "spans": []
+                    }]
+                }
+            }, {
+                "description": {
+                    "type": "StructuredText",
+                    "value": [{
+                        "type": "paragraph",
+                        "text": "The Tata Indica is popular vehicle around the world and the little hatchback was the first car to be designed, developed and manufactured in India. This happened in 1998 and aspects of production were outsourced before that time.",
+                        "spans": []
+                    }]
+                }
+            }, {
+                "description": {
+                    "type": "StructuredText",
+                    "value": [{
+                        "type": "paragraph",
+                        "text": "South Africans can buy Tatas in various shapes and sizes, from compact hatchbacks like the Indica and the bigger, more family-friendly Vista to workhorse vehicles like the Worker pickup and Super Ace commercial truck.",
+                        "spans": []
+                    }]
+                }
+            }, {
+                "description": {
+                    "type": "StructuredText",
+                    "value": [{
+                        "type": "paragraph",
+                        "text": "Their low price compared to most rivals means that they are a popular entry-level option in our market. There will always be a buyer looking for a good deal on a car and Tatas offer solid value for money. They are decent performers in terms of resale value.",
+                        "spans": []
+                    }]
+                }
+            }, {
+                "description": {
+                    "type": "StructuredText",
+                    "value": [{
+                        "type": "paragraph",
+                        "text": "Due to the fact that Tata is not an expensive brand, their cars can lose the same percentage of their value as a more expensive alternative but the result is a smaller financial loss. They retain their value fairly well and if you are looking to sell your Tata, you should receive a decent return on your investment.",
+                        "spans": []
+                    }]
+                }
+            }, {
+                "description": {
+                    "type": "StructuredText",
+                    "value": [{
+                        "type": "paragraph",
+                        "text": " ",
+                        "spans": []
+                    }]
+                }
+            }]
+        },
+        "make.descriptiontwo": {
             "type": "StructuredText",
             "value": [{
                 "type": "paragraph",
-                "text": "The Polo Classic was extremely popular in South Africa and around the world during its production run. It was the car of choice for people seeking an affordable, relatively premium compact car but needed the practicality of a bigger boot. Small enough to be easy to manoeuvre in the city and big enough to fit the luggage for the school run or a weekend away, the Polo Classic ticked plenty boxes. The fact that there are still so many on our roads despite being discontinued in 2009 is testament to their quality and enduring popularity.",
+                "text": "Tata is an Indian car manufacturer that was founded in 1945. They are headquartered in Mumbai, India and bought Jaguar and Land Rover in 2008. The injection of funds caused a remarkable turn of fortune for both British brands and gave Tata access to a premium market that they could not previously reach.",
                 "spans": []
             }]
         },
-        "model.banner-image": {
+        "make.descriptionthree": {
+            "type": "StructuredText",
+            "value": [{
+                "type": "paragraph",
+                "text": "The people’s car of India is the country’s largest car manufacturer and they cater to the needs of emerging markets. Their cars are affordable and efficient. Their reputation as a carmaker of the people is further enhanced by the fact that they were the first company in India to introduce an eight-hour working day and grant maternity leave.",
+                "spans": []
+            }]
+        },
+        "make.descriptionsix": {
+            "type": "StructuredText",
+            "value": [{
+                "type": "paragraph",
+                "text": "Their low price compared to most rivals means that they are a popular entry-level option in our market. There will always be a buyer looking for a good deal on a car and Tatas offer solid value for money. They are decent performers in terms of resale value.",
+                "spans": []
+            }]
+        },
+        "make.banner-image": {
             "type": "Image",
             "value": {
                 "main": {
                     "dimensions": {
-                        "width": 800,
-                        "height": 480
+                        "width": 1275,
+                        "height": 350
                     },
                     "alt": null,
                     "copyright": null,
-                    "url": "https://prismic-io.s3.amazonaws.com/carzar/1ca0acfca70a04ffbf6b2a68816067a6b9cea551_volkswagen-playclassic.jpg"
+                    "url": "https://prismic-io.s3.amazonaws.com/carzar/406a5d50e5ffdc56086e637bda6e82574542b5f8_tata-catogories.jpg"
                 },
                 "views": {}
             }
+        },
+        "make.descriptionfour": {
+            "type": "StructuredText",
+            "value": [{
+                "type": "paragraph",
+                "text": "The Tata Indica is popular vehicle around the world and the little hatchback was the first car to be designed, developed and manufactured in India. This happened in 1998 and aspects of production were outsourced before that time.",
+                "spans": []
+            }]
+        },
+        "make.descriptionseven": {
+            "type": "StructuredText",
+            "value": [{
+                "type": "paragraph",
+                "text": "Due to the fact that Tata is not an expensive brand, their cars can lose the same percentage of their value as a more expensive alternative but the result is a smaller financial loss. They retain their value fairly well and if you are looking to sell your Tata, you should receive a decent return on your investment.",
+                "spans": []
+            }]
+        },
+        "make.descriptionfive": {
+            "type": "StructuredText",
+            "value": [{
+                "type": "paragraph",
+                "text": "South Africans can buy Tatas in various shapes and sizes, from compact hatchbacks like the Indica and the bigger, more family-friendly Vista to workhorse vehicles like the Worker pickup and Super Ace commercial truck.",
+                "spans": []
+            }]
         }
     },
-    "firstPublicationDate": "2017-01-23T12:38:31.000Z",
-    "lastPublicationDate": "2017-01-23T12:38:31.000Z",
+    "firstPublicationDate": "2017-01-23T14:38:36.000Z",
+    "lastPublicationDate": "2017-02-06T13:10:45.000Z",
     "fragments": {
-        "model.make": {
-            "value": "volkswagen"
-        },
-        "model.title": {
+        "make.title": {
             "blocks": [{
                 "type": "heading1",
-                "text": "Volkswagen Polo Classic",
+                "text": "Tata",
                 "spans": []
             }]
         },
-        "model.description": {
+        "make.description": {
+            "value": [{
+                "data": {
+                    "description": {
+                        "type": "StructuredText",
+                        "value": [{
+                            "type": "paragraph",
+                            "text": "CarZar provides you with a quick and easy way to sell your car. To get started, complete the short quote form and we’ll provide you with an estimate valuation in minutes. Our algorithm calculates how much your car is worth so that the valuation is objective and transparent.",
+                            "spans": []
+                        }]
+                    }
+                },
+                "fragments": {
+                    "description": {
+                        "blocks": [{
+                            "type": "paragraph",
+                            "text": "CarZar provides you with a quick and easy way to sell your car. To get started, complete the short quote form and we’ll provide you with an estimate valuation in minutes. Our algorithm calculates how much your car is worth so that the valuation is objective and transparent.",
+                            "spans": []
+                        }]
+                    }
+                }
+            }, {
+                "data": {
+                    "description": {
+                        "type": "StructuredText",
+                        "value": [{
+                            "type": "paragraph",
+                            "text": "Tata is an Indian car manufacturer that was founded in 1945. They are headquartered in Mumbai, India and bought Jaguar and Land Rover in 2008. The injection of funds caused a remarkable turn of fortune for both British brands and gave Tata access to a premium market that they could not previously reach.",
+                            "spans": []
+                        }]
+                    }
+                },
+                "fragments": {
+                    "description": {
+                        "blocks": [{
+                            "type": "paragraph",
+                            "text": "Tata is an Indian car manufacturer that was founded in 1945. They are headquartered in Mumbai, India and bought Jaguar and Land Rover in 2008. The injection of funds caused a remarkable turn of fortune for both British brands and gave Tata access to a premium market that they could not previously reach.",
+                            "spans": []
+                        }]
+                    }
+                }
+            }, {
+                "data": {
+                    "description": {
+                        "type": "StructuredText",
+                        "value": [{
+                            "type": "paragraph",
+                            "text": "The people’s car of India is the country’s largest car manufacturer and they cater to the needs of emerging markets. Their cars are affordable and efficient. Their reputation as a carmaker of the people is further enhanced by the fact that they were the first company in India to introduce an eight-hour working day and grant maternity leave.",
+                            "spans": []
+                        }]
+                    }
+                },
+                "fragments": {
+                    "description": {
+                        "blocks": [{
+                            "type": "paragraph",
+                            "text": "The people’s car of India is the country’s largest car manufacturer and they cater to the needs of emerging markets. Their cars are affordable and efficient. Their reputation as a carmaker of the people is further enhanced by the fact that they were the first company in India to introduce an eight-hour working day and grant maternity leave.",
+                            "spans": []
+                        }]
+                    }
+                }
+            }, {
+                "data": {
+                    "description": {
+                        "type": "StructuredText",
+                        "value": [{
+                            "type": "paragraph",
+                            "text": "The Tata Indica is popular vehicle around the world and the little hatchback was the first car to be designed, developed and manufactured in India. This happened in 1998 and aspects of production were outsourced before that time.",
+                            "spans": []
+                        }]
+                    }
+                },
+                "fragments": {
+                    "description": {
+                        "blocks": [{
+                            "type": "paragraph",
+                            "text": "The Tata Indica is popular vehicle around the world and the little hatchback was the first car to be designed, developed and manufactured in India. This happened in 1998 and aspects of production were outsourced before that time.",
+                            "spans": []
+                        }]
+                    }
+                }
+            }, {
+                "data": {
+                    "description": {
+                        "type": "StructuredText",
+                        "value": [{
+                            "type": "paragraph",
+                            "text": "South Africans can buy Tatas in various shapes and sizes, from compact hatchbacks like the Indica and the bigger, more family-friendly Vista to workhorse vehicles like the Worker pickup and Super Ace commercial truck.",
+                            "spans": []
+                        }]
+                    }
+                },
+                "fragments": {
+                    "description": {
+                        "blocks": [{
+                            "type": "paragraph",
+                            "text": "South Africans can buy Tatas in various shapes and sizes, from compact hatchbacks like the Indica and the bigger, more family-friendly Vista to workhorse vehicles like the Worker pickup and Super Ace commercial truck.",
+                            "spans": []
+                        }]
+                    }
+                }
+            }, {
+                "data": {
+                    "description": {
+                        "type": "StructuredText",
+                        "value": [{
+                            "type": "paragraph",
+                            "text": "Their low price compared to most rivals means that they are a popular entry-level option in our market. There will always be a buyer looking for a good deal on a car and Tatas offer solid value for money. They are decent performers in terms of resale value.",
+                            "spans": []
+                        }]
+                    }
+                },
+                "fragments": {
+                    "description": {
+                        "blocks": [{
+                            "type": "paragraph",
+                            "text": "Their low price compared to most rivals means that they are a popular entry-level option in our market. There will always be a buyer looking for a good deal on a car and Tatas offer solid value for money. They are decent performers in terms of resale value.",
+                            "spans": []
+                        }]
+                    }
+                }
+            }, {
+                "data": {
+                    "description": {
+                        "type": "StructuredText",
+                        "value": [{
+                            "type": "paragraph",
+                            "text": "Due to the fact that Tata is not an expensive brand, their cars can lose the same percentage of their value as a more expensive alternative but the result is a smaller financial loss. They retain their value fairly well and if you are looking to sell your Tata, you should receive a decent return on your investment.",
+                            "spans": []
+                        }]
+                    }
+                },
+                "fragments": {
+                    "description": {
+                        "blocks": [{
+                            "type": "paragraph",
+                            "text": "Due to the fact that Tata is not an expensive brand, their cars can lose the same percentage of their value as a more expensive alternative but the result is a smaller financial loss. They retain their value fairly well and if you are looking to sell your Tata, you should receive a decent return on your investment.",
+                            "spans": []
+                        }]
+                    }
+                }
+            }, {
+                "data": {
+                    "description": {
+                        "type": "StructuredText",
+                        "value": [{
+                            "type": "paragraph",
+                            "text": " ",
+                            "spans": []
+                        }]
+                    }
+                },
+                "fragments": {
+                    "description": {
+                        "blocks": [{
+                            "type": "paragraph",
+                            "text": " ",
+                            "spans": []
+                        }]
+                    }
+                }
+            }]
+        },
+        "make.descriptiontwo": {
             "blocks": [{
                 "type": "paragraph",
-                "text": "The Polo Classic was extremely popular in South Africa and around the world during its production run. It was the car of choice for people seeking an affordable, relatively premium compact car but needed the practicality of a bigger boot. Small enough to be easy to manoeuvre in the city and big enough to fit the luggage for the school run or a weekend away, the Polo Classic ticked plenty boxes. The fact that there are still so many on our roads despite being discontinued in 2009 is testament to their quality and enduring popularity.",
+                "text": "Tata is an Indian car manufacturer that was founded in 1945. They are headquartered in Mumbai, India and bought Jaguar and Land Rover in 2008. The injection of funds caused a remarkable turn of fortune for both British brands and gave Tata access to a premium market that they could not previously reach.",
                 "spans": []
             }]
         },
-        "model.banner-image": {
+        "make.descriptionthree": {
+            "blocks": [{
+                "type": "paragraph",
+                "text": "The people’s car of India is the country’s largest car manufacturer and they cater to the needs of emerging markets. Their cars are affordable and efficient. Their reputation as a carmaker of the people is further enhanced by the fact that they were the first company in India to introduce an eight-hour working day and grant maternity leave.",
+                "spans": []
+            }]
+        },
+        "make.descriptionsix": {
+            "blocks": [{
+                "type": "paragraph",
+                "text": "Their low price compared to most rivals means that they are a popular entry-level option in our market. There will always be a buyer looking for a good deal on a car and Tatas offer solid value for money. They are decent performers in terms of resale value.",
+                "spans": []
+            }]
+        },
+        "make.banner-image": {
             "main": {
-                "url": "https://prismic-io.s3.amazonaws.com/carzar/1ca0acfca70a04ffbf6b2a68816067a6b9cea551_volkswagen-playclassic.jpg",
-                "width": 800,
-                "height": 480,
+                "url": "https://prismic-io.s3.amazonaws.com/carzar/406a5d50e5ffdc56086e637bda6e82574542b5f8_tata-catogories.jpg",
+                "width": 1275,
+                "height": 350,
                 "alt": null
             },
-            "url": "https://prismic-io.s3.amazonaws.com/carzar/1ca0acfca70a04ffbf6b2a68816067a6b9cea551_volkswagen-playclassic.jpg",
+            "url": "https://prismic-io.s3.amazonaws.com/carzar/406a5d50e5ffdc56086e637bda6e82574542b5f8_tata-catogories.jpg",
             "views": {}
+        },
+        "make.descriptionfour": {
+            "blocks": [{
+                "type": "paragraph",
+                "text": "The Tata Indica is popular vehicle around the world and the little hatchback was the first car to be designed, developed and manufactured in India. This happened in 1998 and aspects of production were outsourced before that time.",
+                "spans": []
+            }]
+        },
+        "make.descriptionseven": {
+            "blocks": [{
+                "type": "paragraph",
+                "text": "Due to the fact that Tata is not an expensive brand, their cars can lose the same percentage of their value as a more expensive alternative but the result is a smaller financial loss. They retain their value fairly well and if you are looking to sell your Tata, you should receive a decent return on your investment.",
+                "spans": []
+            }]
+        },
+        "make.descriptionfive": {
+            "blocks": [{
+                "type": "paragraph",
+                "text": "South Africans can buy Tatas in various shapes and sizes, from compact hatchbacks like the Indica and the bigger, more family-friendly Vista to workhorse vehicles like the Worker pickup and Super Ace commercial truck.",
+                "spans": []
+            }]
         }
     }
-}]
+}

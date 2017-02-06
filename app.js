@@ -78,7 +78,9 @@ app.get('/sell/brand/:make', function(req, res) {
     api(req, res).then(function(api) {
         return api.getByUID('make', req.params.make);
     }).then(function(document) {
-        // console.log(document);
+
+        // res.send(JSON.stringify(document));
+        console.log(document);
         // var info = '';
         // res.setHeader('Content-Type', 'application/json');
         // info += `
@@ -90,14 +92,39 @@ app.get('/sell/brand/:make', function(req, res) {
         // </ul>
         // `;
 
-        var makeID = document.id;
+        // var makeID = document.id;
         var makeTitle = document.data['make.title'].value[0].text;
+        var makeDecOne = document.fragments['make.description'].value[0].data.description.value[0].text;
+        var makeDecTwo = document.fragments['make.description'].value[1].data.description.value[0].text;
+        var makeDecThree = document.fragments['make.description'].value[2].data.description.value[0].text;
+        var makeDecFour = document.fragments['make.description'].value[3].data.description.value[0].text;
+        var makeDecFive = document.fragments['make.description'].value[4].data.description.value[0].text;
+        var makeDecSix = document.fragments['make.description'].value[5].data.description.value[0].text;
+        var makeDecSeven = document.fragments['make.description'].value[6].data.description.value[0].text;
+        var makeDecEight = document.fragments['make.description'].value[7].data.description.value[0].text;
+        var makeImg = document.fragments['make.banner-image'].url;
+
+
+
         // pass along the location of my index file
         res.render('makes', {
 
-            mID: makeID,
-            mTitle: makeTitle
-        })
+            // mID: makeID,
+            mTitle: makeTitle,
+            mDescOne: makeDecOne,
+            mDescTwo: makeDecTwo,
+            mDescThree: makeDecThree,
+            mDescFour: makeDecFour,
+            mDescFive: makeDecFive,
+            mDescSix: makeDecSix,
+            mDescSeven: makeDecSeven,
+            mDescEight: makeDecEight,
+            mImg: makeImg
+
+
+
+
+        });
 
         //   res.send(`
         //     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -144,14 +171,14 @@ app.get('/model/:model', function(req, res) {
         //   `
 
 
-        var modelID = document.id;
+        // var modelID = document.id;
         var modelDesc = document.fragments['model.description'].blocks[0].text;
         var modelImg = document.fragments['model.banner-image'].url;
         // JSON.stringify(document)
 
         res.render('models', {
 
-            mdID: modelID,
+            // mdID: modelID,
             mdDesc: modelDesc,
             mdImg: modelImg
         });
@@ -183,16 +210,37 @@ app.get('/sell/brand/:make/:model', function(req, res) {
         console.log(document);
         // res.setHeader('Content-Type', 'application/json');
         // res.send(JSON.stringify(document.results));
-        var makemodelID = document.results[0].id;
+        // var makemodelID = document.results[0].id;
         var makemodelUID = document.results[0].uid;
-        var makemodelDesc = document.results[0].fragments['model.description'].blocks[0].text;
+        // var makemodelDesc = document.results[0].fragments['model.description'].blocks[0].text;
+        var makemodelDescOne = document.results[0].fragments['model.description'].value[0].data.description.value[0].text;
+        var makemodelDescTwo = document.results[0].fragments['model.description'].value[1].data.description.value[0].text;
+        var makemodelDescThree = document.results[0].fragments['model.description'].value[2].data.description.value[0].text;
+        var makemodelDescFour = document.results[0].fragments['model.description'].value[3].data.description.value[0].text;
+        var makemodelDescFive = document.results[0].fragments['model.description'].value[4].data.description.value[0].text;
+        var makemodelDescSix = document.results[0].fragments['model.description'].value[5].data.description.value[0].text;
+        var makemodelDescSeven = document.results[0].fragments['model.description'].value[6].data.description.value[0].text;
+        var makemodelDescEight = document.results[0].fragments['model.description'].value[7].data.description.value[0].text;
+
+        var makemodelImg = document.results[0].fragments['model.banner-image'].url;
+        var makeImg = document.results[0].fragments['model.make-image'].url;
 
 
         res.render('makemodel', {
 
-            mkmdID: makemodelID,
+            // mkmdID: makemodelID,
             mkmdUID: makemodelUID,
-            mkmdDesc: makemodelDesc
+            mkmdDescOne: makemodelDescOne,
+            mkmdDescTwo: makemodelDescTwo,
+            mkmdDescThree: makemodelDescThree,
+            mkmdDescFour: makemodelDescFour,
+            mkmdDescFive: makemodelDescFive,
+            mkmdDescSix: makemodelDescSix,
+            mkmdDescSeven: makemodelDescSeven,
+            mkmdDescEight: makemodelDescEight,
+            mkmdImg: makemodelImg,
+            mkImg: makeImg
+
 
 
         });
